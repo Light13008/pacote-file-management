@@ -1,0 +1,14 @@
+{
+  "name": "pacote-example",
+  "version": "1.0.0",
+  "description": "A simple project to test pacote package installation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Light13008",
+  "license": "ISC",
+  "dependencies": {
+   
+  }
+}
