@@ -53,11 +53,12 @@ async function installPackage(packageName) {
     const oldTree = await getDependencyTree();
 
     // Fetch the package manifest
-    const manifest = await pacote.manifest('./');
-    console.log(manifest);
+    const manifest = await pacote.manifest(packageName);
+    console.log(manifest)
     console.log(`\nFetching manifest for ${packageName}@${manifest.version}`);
 
     // Get the package tarball
+    // this will download the tarball to the current directory and is responisble for installing a zip file
     const tarball = await pacote.tarball.file(packageName, path.join(__dirname, `${packageName}.tgz`));
     console.log(`Downloaded tarball to ${tarball}`);
 
